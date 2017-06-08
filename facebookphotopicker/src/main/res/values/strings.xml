@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">FacebookPhotoPicker</string>
+    <string name="fb_app_id">Replace the facebook app id</string>
+</resources>
