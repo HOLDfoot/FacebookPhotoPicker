@@ -27,6 +27,9 @@ public class SignManager {
 
     public static void startFacebookLogin(final Context context, final SigninCallback signinCallback) {
         callbackManager = CallbackManager.Factory.create();
+        if (AccessToken.getCurrentAccessToken() != null) {
+            LoginManager.getInstance().logOut();
+        }
         LoginManager.getInstance().registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
             @Override
             public void onSuccess(LoginResult loginResult) {
